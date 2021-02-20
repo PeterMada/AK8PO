@@ -1,4 +1,4 @@
-#Scenár
+# Scenár
 
 Webová aplikácia pre tajomníka ústavu na plánovanie výuky.
 Hlavnou úlohou tejto aplikácie je vygenerovanie prehľadného plánu výuky (pracovných štítkov/pracovných povinností ktoré sa následne prideľujú k jednotlivým predmetom).
