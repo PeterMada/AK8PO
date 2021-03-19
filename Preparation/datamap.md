@@ -1,13 +1,10 @@
 # Datová mapa
 
 ## Predmet
-*Skratka* - string
-
-Názov - string
-
-Garant - string
-
-Počet týždňov - int
+-*Skratka* - string
+- Názov - string
+- Garant - string
+- Počet týždňov - int
 
 Počet hodín prednášok - int
 
