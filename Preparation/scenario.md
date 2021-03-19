@@ -9,3 +9,16 @@ Následne je možné vygenerovať pracovné štítky, ktoré obsahujú pracovné
 Až na základe vygenerovaných pracovných štítkov priraďuje (ručne) tajomník jednotlivých zamestnancov k predmetom.
 
 Aplikácia by mala sama prepočítať pracovné štítky pri zmene počtu študentov. Všetko ostatné rieši tajomník sám ručne.
+
+
+**Štruktúra:** Web aplikácia
+
+**Ukladanie dat:** SQL/NoSQL?
+
+**Užívateľ:** Bude iba jeden.
+
+
+**Kľúčové vlastnosti:**
+- oddelený front-end a back-end
+- SQL/NoSQL
+- GraphQL
