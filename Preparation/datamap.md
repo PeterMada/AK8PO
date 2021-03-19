@@ -48,8 +48,8 @@
 ## Pracovný štítok
 - *ID* - int
 - Názov - string
-- Zamestnanec - <Zamestnanec>
-- Predmet - <Predmet>
+- Zamestnanec - `<Zamestnanec>`
+- Predmet - `<Predmet>`
 - Typ - enum
 - Počet študentov - int
 - Počet hodín - int
