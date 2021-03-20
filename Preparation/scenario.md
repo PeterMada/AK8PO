@@ -19,6 +19,7 @@ Aplikácia by mala sama prepočítať pracovné štítky pri zmene počtu štude
 
 
 **Kľúčové vlastnosti:**
-- oddelený front-end a back-end
+- oddelený front-end a back-end (GraphQL)
 - SQL/NoSQL
-- GraphQL
+- Email
+- Security
