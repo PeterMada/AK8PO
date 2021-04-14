@@ -1,6 +1,32 @@
 import React, { useState } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-function App() {
+const Home = () => {
+  return <h2>Home</h2>;
+}
+
+const Subject = () => {
+  return <h2>Predmet</h2>;
+}
+
+const Employee = () => {
+  return <h2>Zamestnanec</h2>;
+}
+
+const StudyGroup = () => {
+  return <h2>Študijná skupina</h2>;
+}
+
+const WorkLabel = () => {
+  return <h2>Pracovný štítok</h2>;
+}
+
+const App = () => {
   const callAPI = () => {
     fetch("http://localhost:9000/testAPI")
       .then(response => response.json())
@@ -30,11 +56,49 @@ function App() {
 
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Domov</Link>
+            </li>
+            <li>
+              <Link to="/subject">Predmet</Link>
+            </li>
+            <li>
+              <Link to="/employee">Zamestnanec</Link>
+            </li>
+            <li>
+              <Link to="/studyGroup">Študijná skupina</Link>
+            </li>
+            <li>
+              <Link to="/workLabel">Pracovný štítok</Link>
+            </li>
+          </ul>
+        </nav>
 
-      </header>
-    </div>
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/subject">
+            <Subject />
+          </Route>
+          <Route path="/employee">
+            <Employee />
+          </Route>
+          <Route path="/studyGroup">
+            <StudyGroup />
+          </Route>
+          <Route path="/workLabel">
+            <WorkLabel />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
