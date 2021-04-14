@@ -3,18 +3,41 @@ import { Formik, Field, Form } from 'formik';
 
 const EmployeePage = () => {
 
+    const handleSubmit = () => {
+
+    }
+
     return (
         <React.Fragment>
             <h1>Zamestnanec</h1>
             <Formik
                 initialValues={{
-                    firstName: '',
-                    lastName: '',
-                    email: '',
+                    firstName: ''
                 }}
-                onSubmit={async (values) => {
-                    await new Promise((r) => setTimeout(r, 500));
-                    alert(JSON.stringify(values, null, 2));
+                onSubmit={async (values, { resetForm }) => {
+                    const options = {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            Accept: "application/json"
+                        },
+                        body: JSON.stringify(values)
+                    };
+
+                    const url = "http://localhost:8000/employee";
+                    try {
+                        const response = await fetch(url, options);
+                        const text = await response.text();
+
+                        if (response.status == 200) {
+                            console.log('Everithing alright');
+                            resetForm({});
+                        } else {
+                            console.log('sometihg went wrong');
+                        }
+                    } catch (error) {
+                        console.error(error);
+                    }
                 }}
             >
                 <Form>

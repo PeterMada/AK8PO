@@ -33,6 +33,7 @@ const WorkLabel = () => {
 }
 
 const App = () => {
+  /*
   const callAPI = () => {
     fetch("http://localhost:9000/testAPI")
       .then(response => response.json())
@@ -59,6 +60,7 @@ const App = () => {
 
 
   const [state, setState] = useState({ apiResponse: '' });
+  */
 
   return (
     <Router>
