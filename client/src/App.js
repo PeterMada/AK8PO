@@ -9,13 +9,14 @@ import {
 import EmployeePage from './pages/EmployeePage';
 import StudyGroupPage from './pages/StudyGroupPage';
 import WorkLabelPage from './pages/WorkLabelPage';
+import SubjectPage from './pages/SubjectPage';
 
 const Home = () => {
   return <h2>Home</h2>;
 }
 
 const Subject = () => {
-  return <h2>Predmet</h2>;
+  return <SubjectPage />;
 }
 
 const Employee = () => {
