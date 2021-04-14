@@ -6,13 +6,14 @@ import {
   Link
 } from "react-router-dom";
 
+import HomePage from './pages/HomePage';
 import EmployeePage from './pages/EmployeePage';
 import StudyGroupPage from './pages/StudyGroupPage';
 import WorkLabelPage from './pages/WorkLabelPage';
 import SubjectPage from './pages/SubjectPage';
 
 const Home = () => {
-  return <h2>Home</h2>;
+  return <HomePage />;
 }
 
 const Subject = () => {
