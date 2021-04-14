@@ -15,9 +15,9 @@ const EmployeePage = () => {
                     workEmail: '',
                     personalEmail: '',
                     phDStudent: false,
-                    percentageOfWorkload: '0',
-                    workingPointsCZ: '',
-                    workingPointsEN: ''
+                    percentageOfWorkload: 0,
+                    workingPointsCZ: 0,
+                    workingPointsEN: 0
                 }}
 
                 validate={values => {

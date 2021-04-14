@@ -10,7 +10,7 @@ exports.create = (req, res) => {
 
     // Create a Employee
     const employee = new Employee({
-        firstName: req.body.firstName,
+        ...req.body
     });
 
     // Save Employee in the database
