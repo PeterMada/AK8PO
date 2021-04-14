@@ -32,7 +32,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p className="App-intro">{state.apiResponse}</p>
+
       </header>
     </div>
   );
