@@ -8,6 +8,7 @@ import {
 
 import EmployeePage from './pages/EmployeePage';
 import StudyGroupPage from './pages/StudyGroupPage';
+import WorkLabelPage from './pages/WorkLabelPage';
 
 const Home = () => {
   return <h2>Home</h2>;
@@ -26,7 +27,7 @@ const StudyGroup = () => {
 }
 
 const WorkLabel = () => {
-  return <h2>Pracovný štítok</h2>;
+  return <WorkLabelPage />;
 }
 
 const App = () => {
