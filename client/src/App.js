@@ -6,6 +6,8 @@ import {
   Link
 } from "react-router-dom";
 
+import EmployeePage from './pages/EmployeePage';
+
 const Home = () => {
   return <h2>Home</h2>;
 }
@@ -15,7 +17,7 @@ const Subject = () => {
 }
 
 const Employee = () => {
-  return <h2>Zamestnanec</h2>;
+  return <EmployeePage />;
 }
 
 const StudyGroup = () => {
@@ -53,7 +55,6 @@ const App = () => {
 
 
   const [state, setState] = useState({ apiResponse: '' });
-
 
   return (
     <Router>
