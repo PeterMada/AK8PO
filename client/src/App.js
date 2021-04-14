@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 
 import EmployeePage from './pages/EmployeePage';
+import StudyGroupPage from './pages/StudyGroupPage';
 
 const Home = () => {
   return <h2>Home</h2>;
@@ -21,7 +22,7 @@ const Employee = () => {
 }
 
 const StudyGroup = () => {
-  return <h2>Študijná skupina</h2>;
+  return <StudyGroupPage />;
 }
 
 const WorkLabel = () => {
