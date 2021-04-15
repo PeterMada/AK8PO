@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,6 +8,7 @@ import {
 
 import HomePage from './pages/HomePage';
 import EmployeePage from './pages/EmployeePage';
+import EmployeeListLoader from './pages/Employee/EmployeeListLoader';
 import StudyGroupPage from './pages/StudyGroupPage';
 import WorkLabelPage from './pages/WorkLabelPage';
 import SubjectPage from './pages/SubjectPage';
@@ -24,6 +25,10 @@ const Employee = () => {
   return <EmployeePage />;
 }
 
+const EmployeeList = () => {
+  return <EmployeeListLoader />;
+}
+
 const StudyGroup = () => {
   return <StudyGroupPage />;
 }
@@ -33,6 +38,7 @@ const WorkLabel = () => {
 }
 
 const App = () => {
+
   /*
   const callAPI = () => {
     fetch("http://localhost:9000/testAPI")
@@ -77,6 +83,9 @@ const App = () => {
               <Link to="/employee">Zamestnanec</Link>
             </li>
             <li>
+              <Link to="/employeeList">Zoznam zamestnanecov</Link>
+            </li>
+            <li>
               <Link to="/studyGroup">Študijná skupina</Link>
             </li>
             <li>
@@ -93,6 +102,9 @@ const App = () => {
           </Route>
           <Route path="/employee">
             <Employee />
+          </Route>
+          <Route path="/employeeList">
+            <EmployeeList />
           </Route>
           <Route path="/studyGroup">
             <StudyGroup />
