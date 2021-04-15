@@ -7,11 +7,11 @@ import {
 } from "react-router-dom";
 
 import HomePage from './pages/HomePage';
-import EmployeePage from './pages/EmployeePage';
+import EmployeePage from './pages/Employee/EmployeePage';
 import EmployeeListLoader from './pages/Employee/EmployeeListLoader';
 import StudyGroupPage from './pages/StudyGroupPage';
 import WorkLabelPage from './pages/WorkLabelPage';
-import SubjectPage from './pages/SubjectPage';
+import SubjectPage from './pages/Subject/SubjectPage';
 
 const Home = () => {
   return <HomePage />;
@@ -38,36 +38,6 @@ const WorkLabel = () => {
 }
 
 const App = () => {
-
-  /*
-  const callAPI = () => {
-    fetch("http://localhost:9000/testAPI")
-      .then(response => response.json())
-      .then(data => setState(data));
-    //  .then(res => res.text())
-    //.then(res => setState({ apiResponse: res }));
-  }
-
-  const getDataFromApi = async () => {
-    try {
-      const request = await fetch('http://localhost:9000/testAPI')
-      const response = request.json()
-      // do something with the data
-      console.log(response);
-    } catch (e) {
-      console.log(e);
-      // show a message telling what went wrong
-    } finally {
-      // un-set the loader 
-    }
-  }
-
-  getDataFromApi();
-
-
-  const [state, setState] = useState({ apiResponse: '' });
-  */
-
   return (
     <Router>
       <div>
@@ -77,10 +47,10 @@ const App = () => {
               <Link to="/">Domov</Link>
             </li>
             <li>
-              <Link to="/subject">Predmet</Link>
+              <Link to="/subject">Pridaj predmet</Link>
             </li>
             <li>
-              <Link to="/employee">Zamestnanec</Link>
+              <Link to="/employee">Pridaj zamestnanca</Link>
             </li>
             <li>
               <Link to="/employeeList">Zoznam zamestnanecov</Link>
@@ -94,8 +64,6 @@ const App = () => {
           </ul>
         </nav>
 
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/subject">
             <Subject />
