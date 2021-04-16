@@ -10,6 +10,7 @@ import HomePage from './pages/HomePage';
 import EmployeePage from './pages/Employee/EmployeePage';
 import EmployeeListLoader from './pages/Employee/EmployeeListLoader';
 import StudyGroupPage from './pages/StudyGroup/StudyGroupPage';
+import StudyGroupListLoader from './pages/StudyGroup/StudyGroupListLoader';
 import WorkLabelPage from './pages/WorkLabelPage';
 import SubjectPage from './pages/Subject/SubjectPage';
 import SubjectListLoader from './pages/Subject/SubjectListLoader';
@@ -38,6 +39,10 @@ const StudyGroup = () => {
   return <StudyGroupPage />;
 }
 
+const StudyGroupList = () => {
+  return <StudyGroupListLoader />;
+}
+
 const WorkLabel = () => {
   return <WorkLabelPage />;
 }
@@ -64,7 +69,10 @@ const App = () => {
               <Link to="/employeeList">Zoznam zamestnanecov</Link>
             </li>
             <li>
-              <Link to="/studyGroup">Študijná skupina</Link>
+              <Link to="/studyGroup">Pridaj študijnú skupinu</Link>
+            </li>
+            <li>
+              <Link to="/studyGroupList">Študijná skupina</Link>
             </li>
             <li>
               <Link to="/workLabel">Pracovný štítok</Link>
@@ -87,6 +95,9 @@ const App = () => {
           </Route>
           <Route path="/studyGroup">
             <StudyGroup />
+          </Route>
+          <Route path="/studyGroupList">
+            <StudyGroupList />
           </Route>
           <Route path="/workLabel">
             <WorkLabel />
