@@ -19,6 +19,8 @@ app.get("/", (req, res) => {
 app.use(cors());
 
 require("./routes/employee.routes.js")(app);
+require("./routes/subject.routes.js")(app);
+require("./routes/studyGroup.routes.js")(app);
 
 // set port, listen for requests
 app.listen(8000, () => {
