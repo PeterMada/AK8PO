@@ -15,15 +15,15 @@ const SubjectPage = () => {
                     numberOfHoursLecture: 0,
                     numberOfHoursSeminar: 0,
                     numberOfHoursExercise: 0,
-                    language: '',
-                    studyForm: '',
-                    typeOfStudy: '',
-                    year: 0,
-                    semester: 0,
-                    terminationMethod: '',
+                    language: 'CZ',
+                    studyForm: 'Prezenčná',
+                    typeOfStudy: 'Bakalářské studium',
+                    year: '1',
+                    semester: 'Zimný',
+                    terminationMethod: 'Zápočet',
                     numberOfCredits: 0,
                     groupSize: 0,
-                    department: ''
+                    department: 'Ústav automatizace a řídicí techniky'
                 }}
 
                 validate={values => {
@@ -52,10 +52,10 @@ const SubjectPage = () => {
                         body: JSON.stringify(values)
                     };
 
-                    const url = "http://localhost:8000/employee";
+                    const url = "http://localhost:8000/subject";
                     try {
                         const response = await fetch(url, options);
-
+                        console.log(response);
                         if (response.status === 200) {
                             console.log('Everithing alright');
                             resetForm({});
@@ -122,44 +122,44 @@ const SubjectPage = () => {
 
                     <label htmlFor="language">Jazyk</label>
                     <Field as="select" name="language">
-                        <option value="red">CZ</option>
-                        <option value="green">EN</option>
+                        <option value="CZ">CZ</option>
+                        <option value="EN">EN</option>
                     </Field>
 
                     <label htmlFor="studyForm">Forma štúdia</label>
                     <Field as="select" name="studyForm">
-                        <option value="red">Prezenčná</option>
-                        <option value="green">Kombinovaná</option>
+                        <option value="Prezenčná">Prezenčná</option>
+                        <option value="Kombinovaná">Kombinovaná</option>
                     </Field>
 
                     <label htmlFor="typeOfStudy">Typ studia</label>
                     <Field as="select" name="typeOfStudy">
-                        <option value="red">Bakalářské studium</option>
-                        <option value="green">Magisterské studium</option>
-                        <option value="green">Doktorské studium</option>
+                        <option value="Bakalářské studium">Bakalářské studium</option>
+                        <option value="Magisterské studium">Magisterské studium</option>
+                        <option value="Doktorské studium">Doktorské studium</option>
                     </Field>
 
                     <label htmlFor="year">Ročník</label>
-                    <Field
-                        id="year"
-                        name="year"
-                        placeholder="0"
-                        type="number"
-                        min="1"
-                        max="5"
-                        step="1" />
+                    <Field as="select" name="year">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </Field>
+
 
                     <label htmlFor="semester">Semester</label>
                     <Field as="select" name="semester">
-                        <option value="red">Zimný</option>
-                        <option value="green">Letný</option>
+                        <option value="Zimný">Zimný</option>
+                        <option value="Letný">Letný</option>
                     </Field>
 
                     <label htmlFor="terminationMethod">Spôsob zakončenia</label>
                     <Field as="select" name="terminationMethod">
-                        <option value="red">Zápočet</option>
-                        <option value="green">Klasifikovaný zápočet</option>
-                        <option value="green">Skúška</option>
+                        <option value="Zápočet">Zápočet</option>
+                        <option value="Klasifikovaný zápočet">Klasifikovaný zápočet</option>
+                        <option value="Skúška">Skúška</option>
                     </Field>
 
                     <label htmlFor="numberOfCredits">Počet kreditov</label>
@@ -184,7 +184,12 @@ const SubjectPage = () => {
 
 
                     <label htmlFor="department">Ústav</label>
-                    <Field id="department" name="department" placeholder="Ústav automatizace a řídicí techniky" />
+                    <Field as="select" name="department">
+                        <option value="Ústav automatizace a řídicí techniky">Ústav automatizace a řídicí techniky</option>
+                        <option value="Ústav informatiky a umělé inteligence">Ústav informatiky a umělé inteligence</option>
+                        <option value="Centrum jazykového vzdělávání">Centrum jazykového vzdělávání</option>
+                        <option value="Ústav řízení procesů">Ústav řízení procesů</option>
+                    </Field>
                     <ErrorMessage name='department' component="span" />
 
                     <button type="submit">Submit</button>
