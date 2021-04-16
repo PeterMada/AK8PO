@@ -12,6 +12,7 @@ import EmployeeListLoader from './pages/Employee/EmployeeListLoader';
 import StudyGroupPage from './pages/StudyGroupPage';
 import WorkLabelPage from './pages/WorkLabelPage';
 import SubjectPage from './pages/Subject/SubjectPage';
+import SubjectListLoader from './pages/Subject/SubjectListLoader';
 
 const Home = () => {
   return <HomePage />;
@@ -19,6 +20,10 @@ const Home = () => {
 
 const Subject = () => {
   return <SubjectPage />;
+}
+
+const SubjectList = () => {
+  return <SubjectListLoader />;
 }
 
 const Employee = () => {
@@ -50,6 +55,9 @@ const App = () => {
               <Link to="/subject">Pridaj predmet</Link>
             </li>
             <li>
+              <Link to="/subjectList">Predmety</Link>
+            </li>
+            <li>
               <Link to="/employee">Pridaj zamestnanca</Link>
             </li>
             <li>
@@ -67,6 +75,9 @@ const App = () => {
         <Switch>
           <Route path="/subject">
             <Subject />
+          </Route>
+          <Route path="/subjectList">
+            <SubjectList />
           </Route>
           <Route path="/employee">
             <Employee />

@@ -110,7 +110,7 @@ const SubjectPage = () => {
                         max="999"
                         step="1" />
 
-                    <label htmlFor="numberOfHoursExercise">Počet hodín cvičení </label>
+                    <label htmlFor="numberOfHoursExercise">Počet hodín cvičení</label>
                     <Field
                         id="numberOfHoursExercise"
                         name="numberOfHoursExercise"
