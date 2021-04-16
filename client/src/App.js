@@ -9,7 +9,7 @@ import {
 import HomePage from './pages/HomePage';
 import EmployeePage from './pages/Employee/EmployeePage';
 import EmployeeListLoader from './pages/Employee/EmployeeListLoader';
-import StudyGroupPage from './pages/StudyGroupPage';
+import StudyGroupPage from './pages/StudyGroup/StudyGroupPage';
 import WorkLabelPage from './pages/WorkLabelPage';
 import SubjectPage from './pages/Subject/SubjectPage';
 import SubjectListLoader from './pages/Subject/SubjectListLoader';
