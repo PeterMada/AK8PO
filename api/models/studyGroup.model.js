@@ -1,48 +1,40 @@
 const sql = require("./db.js");
 
-const Subject = function (subject) {
-    this.code = subject.code;
-    this.subjectName = subject.subjectName;
-    this.tutor = subject.tutor;
-    this.numberOfWeeks = subject.numberOfWeeks;
-    this.numberOfHoursLecture = subject.numberOfHoursLecture;
-    this.numberOfHoursSeminar = subject.numberOfHoursSeminar;
-    this.numberOfHoursExercise = subject.numberOfHoursExercise;
-    this.language = subject.language;
-    this.studyForm = subject.studyForm;
-    this.typeOfStudy = subject.typeOfStudy;
-    this.year = subject.year;
-    this.semester = subject.semester;
-    this.terminationMethod = subject.terminationMethod;
-    this.numberOfCredits = subject.numberOfCredits;
-    this.groupSize = subject.groupSize;
-    this.department = subject.department;
+const StudyGroup = function (studyGroup) {
+    this.code = studyGroup.code;
+    this.name = studyGroup.name;
+    this.studyForm = studyGroup.studyForm;
+    this.typeOfStudy = studyGroup.typeOfStudy;
+    this.language = studyGroup.language;
+    this.year = studyGroup.year;
+    this.semester = studyGroup.semester;
+    this.numberOfStudents = studyGroup.numberOfStudents;
 };
 
-Subject.create = (newSubject, result) => {
-    sql.query("INSERT INTO Subject SET ?", newSubject, (err, res) => {
+StudyGroup.create = (newStudyGroup, result) => {
+    sql.query("INSERT INTO StudyGroup SET ?", newStudyGroup, (err, res) => {
         if (err) {
             console.log("error: ", err);
             result(err, null);
             return;
         }
 
-        console.log("created subject: ", { id: res.insertId, ...newSubject });
-        result(null, { id: res.insertId, ...newSubject });
+        console.log("created StudyGroup: ", { id: res.insertId, ...newStudyGroup });
+        result(null, { id: res.insertId, ...newStudyGroup });
     });
 };
 
-Subject.getAll = result => {
-    sql.query("SELECT * FROM Subject", (err, res) => {
+StudyGroup.getAll = result => {
+    sql.query("SELECT * FROM StudyGroup", (err, res) => {
         if (err) {
             console.log("error: ", err);
             result(null, err);
             return;
         }
 
-        console.log("subjects: ", res);
+        console.log("StudyGroups: ", res);
         result(null, res);
     });
 };
 
-module.exports = Subject;
+module.exports = StudyGroup;

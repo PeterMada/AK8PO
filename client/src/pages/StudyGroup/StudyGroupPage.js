@@ -40,7 +40,7 @@ const StudyGroupPage = () => {
                         body: JSON.stringify(values)
                     };
 
-                    const url = "http://localhost:8000/subject";
+                    const url = "http://localhost:8000/studyGroup";
                     try {
                         const response = await fetch(url, options);
                         if (response.status === 200) {
