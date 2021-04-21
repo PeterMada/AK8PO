@@ -22,6 +22,7 @@ const SubjectListPage = ({ subjects }) => {
                     <div><span>Počet kreditov:</span> {subject.numberOfCredits}</div>
                     <div><span>Veľkosť skupiny:</span> {subject.groupSize}</div>
                     <div><span>Ústav:</span> {subject.department}</div>
+
                 </div>
             ))}
         </>

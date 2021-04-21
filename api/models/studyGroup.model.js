@@ -37,4 +37,28 @@ StudyGroup.getAll = result => {
     });
 };
 
+
+StudyGroup.updateById = (id, employee, result) => {
+    sql.query(
+        "UPDATE StudyGroup SET name = ?, active = ? WHERE id = ?",
+        [employee.email, employee.name, employee.active, id],
+        (err, res) => {
+            if (err) {
+                console.log("error: ", err);
+                result(null, err);
+                return;
+            }
+
+            if (res.affectedRows == 0) {
+                // not found employee with the id
+                result({ kind: "not_found" }, null);
+                return;
+            }
+
+            console.log("updated employee: ", { id: id, ...employee });
+            result(null, { id: id, ...employee });
+        }
+    );
+};
+
 module.exports = StudyGroup;
