@@ -56,26 +56,29 @@ const App = () => {
             <li>
               <Link to="/">Domov</Link>
             </li>
+            <li>&nbsp;</li>
             <li>
               <Link to="/subject">Pridaj predmet</Link>
-            </li>
-            <li>
-              <Link to="/subjectList">Predmety</Link>
             </li>
             <li>
               <Link to="/employee">Pridaj zamestnanca</Link>
             </li>
             <li>
+              <Link to="/studyGroup">Pridaj študijnú skupinu</Link>
+            </li>
+            <li>&nbsp;</li>
+            <li>
+              <Link to="/subjectList">Zoznam Predmetov</Link>
+            </li>
+            <li>
               <Link to="/employeeList">Zoznam zamestnanecov</Link>
             </li>
             <li>
-              <Link to="/studyGroup">Pridaj študijnú skupinu</Link>
+              <Link to="/studyGroupList">Zoznam študijných skupín</Link>
             </li>
+            <li>&nbsp;</li>
             <li>
-              <Link to="/studyGroupList">Študijná skupina</Link>
-            </li>
-            <li>
-              <Link to="/workLabel">Pracovný štítok</Link>
+              <Link to="/workLabel">Pracovné štítky</Link>
             </li>
           </ul>
         </nav>
